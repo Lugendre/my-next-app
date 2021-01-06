@@ -1,15 +1,14 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import * as React from "react";
+import { SampleComponent1 } from "../components/SampleComponents1";
+import { SampleComponent2 } from "../components/SampleComponents2";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+const IndexPage = () => {
+  return (
+    <div>
+      <SampleComponent1 />
+      <SampleComponent2 name="My Counter for TypeScript" />
+    </div>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
